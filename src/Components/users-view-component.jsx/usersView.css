@@ -1,0 +1,12 @@
+.tableDiv {
+    margin-top: 10%;
+}
+
+.searchBox {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.searchBox input{
+    width: 30%;
+}
