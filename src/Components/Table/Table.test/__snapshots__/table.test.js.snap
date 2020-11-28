@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Component should render snapshot 1`] = `
+<table
+  className="table"
+>
+  <thead
+    className="thead"
+  >
+    <tr>
+      <th>
+         
+        Test
+         
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    Test
+  </tbody>
+</table>
+`;

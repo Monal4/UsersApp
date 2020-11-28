@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+<main>
+  <div>
+    <div
+      className="tableDiv"
+    >
+      <div
+        className="searchBox"
+      >
+        <input
+          onChange={[Function]}
+          placeholder="search Users"
+          type="search"
+        />
+      </div>
+      <table
+        className="table"
+      >
+        <thead
+          className="thead"
+        >
+          <tr>
+            <th>
+               
+              Name
+               
+            </th>
+            <th>
+               
+              Email
+               
+            </th>
+            <th>
+               
+              City
+               
+            </th>
+            <th>
+               
+              Company
+               
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
+  </div>
+</main>
+`;

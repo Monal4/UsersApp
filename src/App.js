@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import Routes from './util/routes'
+import Routes from './util/routes';
+import React from 'react';
 
 const App = () => {
   return (
