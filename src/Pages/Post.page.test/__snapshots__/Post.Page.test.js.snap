@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post Page Component test is a snapshot for PostPage 1`] = `ShallowWrapper {}`;

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import {connect} from 'react-redux';
 import {getUsers} from '../redux-files/user-reducer/user-actions';
-import Users from '../Components/users-view-component.jsx/usersView.component.js';
+import Users from '../Components/users-view-component/usersView.component';
 
 const ViewPage = ({getUsers, users}) => {
 
@@ -19,8 +20,14 @@ const ViewPage = ({getUsers, users}) => {
         user.name.toLowerCase().startsWith(searchField.toLowerCase())    
     ));
 
+    const history = useHistory();
+
+    const handlePost = (id) => {
+        history.push("/posts/"+id)
+    }
+
     return(
-        <Users users={filteredUsers} searchField={searchField} handleInput={handleInput}/>
+        <Users users={filteredUsers} handleInput={handleInput} handlePost={handlePost}/>
     )
 }
 

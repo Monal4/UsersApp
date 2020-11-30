@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from "enzyme";
 import '../../../setup';
-import renderer from 'react-test-renderer';
 import UserPost from "../userPost.component";
+import axios from 'axios'
 
 describe('Users post component', () => {
 
@@ -15,10 +15,13 @@ describe('Users post component', () => {
         }];
 
     it('is a snapshot for userPost', () => {
-        const component = renderer.create(<UserPost post={TestPost}/>);
-    
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+        expect(shallow(<UserPost post={TestPost}/>)).toMatchSnapshot();
+    });
+
+    it('is a userPost api Test', () => {
+        const response =  axios(`https://jsonplaceholder.typicode.com/posts?userId=1`);
+
+        expect(response).not.toBeNull();
     });
 
 });

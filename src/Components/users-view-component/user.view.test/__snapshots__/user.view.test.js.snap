@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it as user view component is a body snapshot 1`] = `[Function]`;
+
+exports[`it as user view component is a nested table component snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`it as user view component is a snapshot 1`] = `ShallowWrapper {}`;

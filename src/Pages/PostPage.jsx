@@ -6,11 +6,12 @@ const PostPage = (props) => {
     
     const[data, setData] = useState([]);
 
+    async function report() {
+        const response = await axios(`https://jsonplaceholder.typicode.com/posts?userId=`+ props.match.params.userId);
+        setData(await response.data);
+    }
+
     useEffect(() => {
-        const report = async () => {
-            const response = await axios(`https://jsonplaceholder.typicode.com/posts?userId=`+props.match.params.userId);
-            setData(response.data);
-        }
         report();
     },[]);
 

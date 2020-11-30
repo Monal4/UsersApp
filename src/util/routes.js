@@ -4,7 +4,7 @@ import PostPage from '../Pages/PostPage'
 import React from 'react'
 
 const Routes = () => {
-      return(
+    return(
         <div>
             <BrowserRouter>
                 <Switch>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from "enzyme";
 import '../../../setup';
-import renderer from 'react-test-renderer';
 import Table from "../Table";
 
 describe('Table Component', () => {
@@ -11,10 +10,7 @@ describe('Table Component', () => {
     });
 
     it('should render snapshot', () => {
-        const component = renderer.create(<Table headers={["Test"]} body={"Test"}/>);
-    
-        const tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+        expect(shallow(<Table headers={["Test"]} body={"Test"}/>)).toMatchSnapshot();
     });
 
     it('validates table headers and body', () => {

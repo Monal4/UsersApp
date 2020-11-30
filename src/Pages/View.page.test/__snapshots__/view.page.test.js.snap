@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`View Page Component test is a snapshot for ViewPage 1`] = `ShallowWrapper {}`;

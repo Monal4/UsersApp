@@ -1,11 +1,15 @@
-import {REQUEST_USERS} from './user-reducer.constants'
+import { 
+    REQUEST_USERS,
+    REQUEST_DECLINED,
+    UPDATE_USERS } from './user-reducer.constants'
 
 const initialState = {
     users:[],
+    message: '',
     loading:true
 }
 
-export default function(state = initialState, action) {
+const userReducer = (state = initialState, action) => {
 
     switch(action.type){
 
@@ -15,6 +19,18 @@ export default function(state = initialState, action) {
                 users:action.payload,
                 loading:false
             }
+        case REQUEST_DECLINED:
+            return {
+                ...state,
+                message: action.payload,
+                loading: false
+            }
+        case UPDATE_USERS:
+            return{
+                ...state,
+                users: state.users + action.payload ,
+                loading: false
+            }
         default: 
             return {
                 ...state
@@ -22,3 +38,5 @@ export default function(state = initialState, action) {
     }
 
 }
+
+export default userReducer;

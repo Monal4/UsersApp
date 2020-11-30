@@ -1,4 +1,4 @@
-import {REQUEST_USERS, REQUEST_DECLINED} from './user-reducer.constants'
+import {REQUEST_USERS, REQUEST_DECLINED,UPDATE_USERS } from './user-reducer.constants'
 import axios from 'axios'
 
 export const getUsers = () => async dispatch => {
@@ -21,3 +21,8 @@ export const getUsers = () => async dispatch => {
     }
 
 }
+
+export const updateUsers = (newUser)  => ({
+    type: UPDATE_USERS,
+    payload: newUser
+})
